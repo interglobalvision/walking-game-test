@@ -1,0 +1,26 @@
+{
+  "name": "interglobalvision-meteor-boil",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/interglobalvision/interglobalvision-meteor-boil.git"
+  },
+  "author": "interglobalvision",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/interglobalvision/interglobalvision-meteor-boil/issues"
+  },
+  "homepage": "https://github.com/interglobalvision/interglobalvision-meteor-boil",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jscs": "^1.6.0",
+    "gulp-jshint": "^1.11.0",
+    "jscs": "^1.13.1",
+    "jshint": "^2.8.0"
+  }
+}
