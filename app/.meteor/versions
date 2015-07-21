@@ -17,6 +17,7 @@ coffeescript@1.0.6
 ddp@1.1.0
 deps@1.0.7
 ejson@1.0.6
+em0ney:chartjs@1.0.2
 email@1.0.6
 fastclick@1.0.3
 geojson-utils@1.0.3
