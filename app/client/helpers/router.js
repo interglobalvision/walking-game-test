@@ -71,6 +71,16 @@ Router.map(function() {
 
   this.route('content');
 
+  // Games
+
+  this.route('accelerometer', {
+    path: '/accelerometer',
+  });
+
+  this.route('soundLevel', {
+    path: '/sound-level',
+  });
+
   // Users
 
   this.route('login');
