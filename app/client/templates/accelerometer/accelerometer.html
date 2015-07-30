@@ -1,8 +1,31 @@
 <template name="accelerometer">
   <h2>Accelerometer</h2>
+  <h3>Axis</h3>
+  <input type="checkbox" name="x" value="x" checked>x 
+  <input type="checkbox" name="y" value="y">y
+  <input type="checkbox" name="z" value="z">z<br>
   <div>
+    <h3>Record base</h3>
+    <button id="accel-base-start">Start</button>
+    <button id="accel-base-stop">Stop</button>
+    <br />
+    {{> chartCanvas id='baseChart' class='lineChart'}}
+  </div>
+
+  <div>
+    <h3>Record test</h3>
     <button id="accel-start">Start</button>
     <button id="accel-stop">Stop</button>
+    <br />
+    {{> chartCanvas id='testChart' class='lineChart'}}
   </div>
-  {{> chartCanvas id='lineChart'}}
+
+  <div>
+    <h3>Compare</h3>
+    <button id="compare">Compare</button>
+      <p id="comparison-x" class="comparison-result">X: <span></span></p>
+      <p id="comparison-y" class="comparison-result">Y: <span></span></p>
+      <p id="comparison-z" class="comparison-result">Z: <span></span></p>
+    <br />
+  </div>
 </template>

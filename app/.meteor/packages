@@ -15,3 +15,10 @@ momentjs:moment
 stylus
 tap:i18n
 em0ney:chartjs
+
+
+cosmos:browserify
+meteorhacks:npm
+
+
+npm-container

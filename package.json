@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/interglobalvision/interglobalvision-meteor-boil",
   "devDependencies": {
+    "dtw": "0.0.3",
     "gulp": "^3.9.0",
     "gulp-jscs": "^1.6.0",
     "gulp-jshint": "^1.11.0",
