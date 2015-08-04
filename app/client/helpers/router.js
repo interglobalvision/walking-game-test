@@ -81,6 +81,10 @@ Router.map(function() {
     path: '/sound-level',
   });
 
+  this.route('webcam', {
+    path: '/webcam',
+  });
+
   // Users
 
   this.route('login');
