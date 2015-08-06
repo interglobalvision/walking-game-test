@@ -85,6 +85,10 @@ Router.map(function() {
     path: '/webcam',
   });
 
+  this.route('compass', {
+    path: '/compass',
+  });
+
   // Users
 
   this.route('login');
