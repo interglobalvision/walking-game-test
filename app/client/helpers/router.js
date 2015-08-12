@@ -22,6 +22,12 @@ var filters = {
     this.next();
   },
 
+  googleMaps: function () {
+    GoogleMaps.load();
+    console.log('Google maps loaded');
+    this.next();
+  },
+
   isLoggedIn: function() {
     if (!(Meteor.loggingIn() || Meteor.user())) {
       alert('Please Log In First.')
@@ -32,6 +38,7 @@ var filters = {
 }
 
 Router.onBeforeAction(filters.myFilter, {only: ['items']});
+Router.onBeforeAction(filters.googleMaps, {only: ['compass']});
 
 // Routes
 

@@ -9,17 +9,19 @@ Template.signup.events = {
     };
 
     if(!user.username || !user.email || !user.password){
-//       flash('Please fill in all fields');
-    }else{
+      // flash('Please fill in all fields');
+      console.log('Please fill in all fields');
+    } else {
       Accounts.createUser(user, function(error){
         if(error){
-//           flash(error.reason, 'error');
-        }else{
+          //           flash(error.reason, 'error');
+          console.log(error.reason, 'error');
+        } else {
           Router.go('/');
-//           flash('Thanks for signing up!');
+          //           flash('Thanks for signing up!');
         }
       });
     }
 
-  }
+  },
 };

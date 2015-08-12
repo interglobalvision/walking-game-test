@@ -1,4 +1,10 @@
 <template name="compass">
   <a href="/">☜ go home</a><br/>
+  <p>Actual location: <span id="actual-location">0, 0</span></p>
+  <p>Destiny location: <span id="destiny-location">0, 0</span></p>
+  <p>Distance: <span id="distance">0</span> Km</p>
   <div id="compass"></div>
+  <div class="map-container">
+    {{> googleMap name="exampleMap" options=mapOptions}}
+  </div>
 </template>
