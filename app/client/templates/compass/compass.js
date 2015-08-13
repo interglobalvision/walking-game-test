@@ -9,6 +9,10 @@ Template.compass.onCreated( function () {
   });
 });
 
+Template.compass.onDestroyed( function () {
+  Compass.stop();
+});
+
 
 Template.compass.helpers({
   isLoggedIn: function () {
@@ -144,7 +148,7 @@ var Compass = {
     });
 
     // Start orientation compass
-    window.addEventListener('deviceorientation', function(eventData) {
+    $(window).bind('deviceorientation.compassOrientation', function() {
 
       // Generate reference north point
       var distance = _this.getDistance( _this.position, _this.destiny, true);   
@@ -156,7 +160,7 @@ var Compass = {
       // Get compensation angle
       _this.compensationAngle = _this.getAngle( reference, _this.position, _this.destiny);
 
-      var dir = eventData.alpha - _this.compensationAngle;
+      var dir = event.alpha - _this.compensationAngle;
       var rotation = "rotate(" + dir + "deg)";
       document.getElementById('compass').style.WebkitTransform = rotation;
       document.getElementById('compass').style.msTransform = rotation;
@@ -167,6 +171,8 @@ var Compass = {
     var _this = this;
 
     navigator.geolocation.clearWatch( _this.watchId );
+
+    $(window).unbind('.compassOrientation');
   },
   init: function() {
     var _this = this;
