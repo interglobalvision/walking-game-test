@@ -1,0 +1,28 @@
+{"frames": {
+
+"coach01.png":
+{
+	"frame": {"x":2,"y":2,"w":387,"h":370},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":8,"w":387,"h":370},
+	"sourceSize": {"w":400,"h":400}
+},
+"coach02.png":
+{
+	"frame": {"x":391,"y":2,"w":387,"h":370},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":8,"w":387,"h":370},
+	"sourceSize": {"w":400,"h":400}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "coach-angry.png",
+	"format": "RGBA8888",
+	"size": {"w":780,"h":374},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:abee9acce004f367e1e7e812435c40c4:1bbde9a91c61c672b1e0b931acdc5407:4711eaa0d1c17c9ae24e84a9c310db01$"
+}
+}
