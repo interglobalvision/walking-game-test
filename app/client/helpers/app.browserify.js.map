@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": [
-    "../../../../../../../../.meteor/packages/cosmos_browserify/.0.5.0.un09xp++os+web.browser+web.cordova/plugin.CosmosBrowserify.os/npm/CosmosBrowserify/node_modules/browserify/node_modules/browser-pack/_prelude.js",
+    "../../../../../../../.meteor/packages/cosmos_browserify/.0.5.0.m6l4da++os+web.browser+web.cordova/plugin.CosmosBrowserify.os/npm/CosmosBrowserify/node_modules/browserify/node_modules/browser-pack/_prelude.js",
     "_stream_0.js",
     "../../../../../node_modules/dtw/index.js",
     "../../../../../node_modules/dtw/lib/comparison.js",
