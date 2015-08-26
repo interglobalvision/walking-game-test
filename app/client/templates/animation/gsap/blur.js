@@ -56,6 +56,5 @@ Template.gsapBlur.onRendered(function () {
       }
     ));
   tl.to( coach, 2, {rotation: 360});
-  //tl.play();
 });
 
