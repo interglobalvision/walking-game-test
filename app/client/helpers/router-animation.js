@@ -11,14 +11,25 @@ Client-side Router.
 
 Router.map(function() {
 
-  // Animation
+  // PIXI
   
-  this.route('angry', {
-    path: '/angry'
+  this.route('pixiAngry', {
+    path: '/pixiAngry'
   });
 
-  this.route('blur', {
-    path: '/blur'
+  this.route('pixiBlur', {
+    path: '/pixiBlur'
   });
+
+  //GSAP
+
+  this.route('gsapAngry', {
+    path: '/gsapAngry'
+  });
+
+  this.route('gsapBlur', {
+    path: '/gsapBlur'
+  });
+
 
 });
