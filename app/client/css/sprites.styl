@@ -1,3 +1,19 @@
+.text-box
+  position: fixed
+  background: white
+  bottom: 2%
+  left: 2%
+  width: 96%
+  padding: 4%
+  box-sizing: border-box
+  border: 10px solid blue
+  color: blue
+  font-size: 2em
+  z-index: 999
+  display: none
+  border-radius: 15px
+  
+
 #stage
   position: fixed
   top: 0px
@@ -5,31 +21,57 @@
   width: 100%
   height: 100%
   overflow: hidden
+  
+.set 
+  background-size: cover
+  position: fixed
+  width: 100%
+  height: 100%
+
+.bedroom-wall
+  z-index: 1
+  background-image: url('sprites/bedroom.png')
+  background-position: 0%
+  animation: hue-rotate 4s infinite
+  
+.bedroom-furniture
+  z-index: 2
+  background-image: url('sprites/bedroom.png')
+  background-position: 50%
+  -webkit-filter: blur(40px)
+  filter: blur(40px)
+  
+.bedroom-bed
+  z-index: 3
+  background-image: url('sprites/bedroom.png')
+  background-position: 100%
+  -webkit-filter: blur(40px)
+  filter: blur(40px)
 
 .coach-angry
   position: absolute
-  top: 25%
-  left: 25%
-  width: 50%;
-  height: 50%;
-  background: url('sprites/coach-angry.png');
-  background-position: 0% center
+  z-index: 4
+  top: 0%
+  left: 50%
+  margin-left: -300px
+  width: 600px
+  height: 100%
+  background-image:  url('sprites/coach-angry.png')
   background-repeat: no-repeat
-  background-size: 200%
-  animation: two .2s steps(2) infinite
+  background-position: 0
+  background-size: 2400px
+  animation: coach-angry .5s steps(4, end) infinite
+  -webkit-filter: blur(40px)
+  filter: blur(40px)
 
-@keyframes two
+@keyframes coach-angry 
   100%
-    background-position: 200% center
-     
-@keyframes three
-  100%
-    background-position: 300% center
+    background-position: -2400px
     
-@keyframes four
-  100%
-    background-position: 400% center
-    
-@keyframes five
-  100%
-    background-position: 500% center
+@keyframes hue-rotate
+  from
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
+  to 
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);

@@ -45,16 +45,46 @@ Template.gsapBlur.onRendered(function () {
     }
   }
 
+  var showText = function (target, message, index, interval) {   
+    if (index < message.length) {
+      $('.text-box').show().append(message[index++]);
+      setTimeout(function () { showText(target, message, index, interval); }, interval);
+    } else {
+      $('.text-box').append('<a class="close-text-box">&rarr;</a>');
+    }
+  }, wakeUp = "Hey Wake Up!";
+
+  $(document).on('click','.close-text-box', function() {
+    $('.text-box').hide();
+  });
+
+  showText(".text-box", wakeUp, 0, 100);
 
   var tl = new TimelineLite(),
-    coach = $('.coach-angry');
+    $coach = $('.coach-angry'),
+    $bed = $('.bedroom-bed'),
+    $wall = $('.bedroom-wall'),
+    $furniture = $('.bedroom-furniture');
 
-  tl.add( TweenMax.to(coach, 2, 
+  tl.add( TweenMax.to($bed, 2, 
       {
         onUpdate: cssFilterTween, 
         onUpdateParams: ["{self}","blur", 40, 0]
       }
     ));
-  tl.to( coach, 2, {rotation: 360});
+
+  tl.add( TweenMax.to($furniture, 2, 
+      {
+        onUpdate: cssFilterTween, 
+        onUpdateParams: ["{self}","blur", 40, 0]
+      }
+    ));
+
+  tl.add( TweenMax.to($coach, 2, 
+      {
+        onUpdate: cssFilterTween, 
+        onUpdateParams: ["{self}","blur", 40, 0]
+      }
+    ));
 });
 
